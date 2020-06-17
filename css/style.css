@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900&display=swap');
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+body{
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+}  
+.container{
+    max-width: 1140px;
+    margin: auto;
+} 
+.row{
+    display: flex;
+    flex-wrap: wrap ;
+}
+header{
+    position: fixed;
+    left: 0px;
+    right: 0px;  
+    background-color: #000;
+    border-bottom: 1px solid #423940;
+padding: 0px 15px;
+z-index: 10;
+}
+header .row{
+    justify-content: space-between;
+    align-items: center;
+}
+header .brand-name a {
+text-decoration: none;
+font-size: 22px;
+font-weight: 600;
+color: #ffffff;
+text-transform: uppercase;
+position: relative;
+}
+
+header .navbar ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+}
+header .navbar ul li{
+    display: inline-block;
+    margin-left: 35px;
+}
+header .navbar ul li a{
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 72px;
+    color: #ffffff;
+    font-weight: 600;
+    display: block;
+    position: relative;
+}
+header .navbar ul li a::before{
+    content: '';
+    height: 3px;
+    background-color: #ffffff;
+    width: 0%;
+    position: absolute;
+    right: 0px;
+    bottom: -1px;
+    transition: all .5s ease;
+}
+header .navbar ul li a:hover::before{
+    width: 100%;
+    left: 0;
+}
+header .navbar ul li a.active::before{
+    width: 100%;
+    left: 0;
+}
+.home{
+    min-height: 100vh;
+    background-image: url("/images/hello_world.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 15px;
+}
+
+.home  .full-screen{
+    min-height: 100vh;
+}
+.home .home-content{
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.home .home-content .block{
+    flex: 0 0 75%;
+    max-width: 75%;
+    padding-left: 35px;
+    border-left: 5px solid #ffffff;
+    margin-top: 50px;
+}
+.home .home-content .block h6{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
+.home .home-content .block h1{
+    color: #ffffff;
+    font-size: 70px;
+    font-weight: 600;
+    margin:  0 0 10px;
+    padding: 0;
+    line-height: 1.2 ;
+
+}
+.home .home-content .block h3{
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
+.home .home-content .block .cv-btn{
+    padding-top: 20px;
+}
+.home .home-content .block .cv-btn a{
+    border-radius:  4px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 12px 25px;
+    text-decoration: none;
+    display: inline-block; 
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight:  600;
+    transition: all .5s ease;
+    background-color: transparent;
+}
+.home .home-content .block .cv-btn a:hover{
+   background-color: #ffffff;
+   color: #000;
+}
+.about-me{
+    width: 100%;
+    padding-bottom: 30px;
+}
+.about-me h2{
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    position: relative;
+}
+
+.about-me h2:after
+{
+    position: absolute;
+    content:' ';
+    width: 80px;
+    display:block;
+    border:1px solid black;
+    left: 50%;
+    margin-left: -40px;
+}
+.about-me .col-details{
+    width: 100%;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+
+.about-me .socialbtns li {
+    list-style: none outside none;
+    display: inline-block;
+}
+.about-me .socialbtns, .about-me .socialbtns ul, .socialbtns li {
+    margin: 0;
+    padding: 5px;
+  }
+  
+.about-me .socialbtns a, a:hover {
+	text-decoration: none;
+}
+.about-me .socialbtns{
+    text-align: center;
+}
+.about-me .socialbtns .fa {
+	width: 40px;
+    height: 40px;
+	color: #000;
+	background-color: #FFF;
+	border: 1px solid #000;
+	padding-top: 12px;
+	border-radius: 22px;
+	-moz-border-radius: 22px;
+	-webkit-border-radius: 22px;
+	-o-border-radius: 22px;
+}
+
+.about-me .socialbtns .fa:hover {
+	color: #FFF;
+	background-color: #000;
+	border: 1px solid #000;
+}
+
+/*Work section*/
+.works {
+    background-color: #f1f1f1;
+    padding: 20px
+  }
+ .works .main {
+    max-width: 1200px;
+    margin: auto;
+  }
+.works .main h2{
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    position: relative;
+  }
+.works .main h2:after{
+    position: absolute;
+    content:' ';
+    width: 80px;
+    display:block;
+    border:1px solid black;
+    left: 50%;
+    margin-left: -40px;
+}
+
+
+.works .main .row .column {
+  padding: 8px;
+
+}
+.works .main .row .column {
+    float: left;
+    width: 25%;
+  }
+.works .main .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.works .main .content {
+    background-color: white;
+    padding: 10px;
+}
+.works .main .main-work .content{
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.works .main .row .column .content .tags ul{
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+}
+.works .main .row .column .content .tags ul li{
+    background-color: #333;
+    border-radius: 8px;
+    color: #fff;
+    padding: 0px 5px;
+    font-size: 12px;
+  display: inline-block;
+}
+.works .main .row .column .content .container , .works .main .main-work .content .container{
+    position: relative;
+}
+.works .main .row .column .content .container .image , .works .main .main-work .content .container .image{
+    opacity: 1;
+    display: block;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.works .main .row .column .content .container .explore , .works .main .main-work .content .container .explore {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -20px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .works .main .row .column .content .container:hover  .image {
+    opacity: 0.3;
+  }
+  
+  .works .main .row .column .content .container:hover .explore  {
+    opacity: 1;
+  }
+
+  .works .main .main-work .content .tags ul{
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+}
+.works .main .main-work .content .tags ul li{
+    background-color: #333;
+    border-radius: 8px;
+    color: #fff;
+    padding: 0px 5px;
+    font-size: 12px;
+  display: inline-block;
+}
+.works .main .main-work .content .container:hover  .image {
+    opacity: 0.3;
+  }
+  
+  .works .main .main-work .content .container:hover .explore  {
+    opacity: 1;
+  }
+
+.works .view-more{
+    text-align: center;
+    margin-top: 20px;
+}
+.works .view-more .more{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    color: #000;
+    background-color: transparent;
+    font-size: 15px;
+    transition: .5s  ease-in-out;
+}
+
+.works .view-more .more:hover{
+    background-color: black;
+    color: #FFF;
+}
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+    .works .main .row .column {
+      width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .works .main .row .column {
+      width: 100%;
+    }
+  }
+
+
+  /*Skills */
+.skills  h2{
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    position: relative;
+  }
+.skills h2:after{
+    position: absolute;
+    content:' ';
+    width: 80px;
+    display:block;
+    border:1px solid black;
+    left: 50%;
+    margin-left: -40px;
+}
+
+.skills .ski{
+    padding-bottom: 30px;
+}
+
+.skills .ski .title{
+      margin-left: 20%;
+      text-align: right;
+      display: inline-block;
+  }
+.skills .ski .value{
+      width: 40%;
+      background-color: #80808042;
+      margin-right: 20%;
+      border-radius: 10px;
+      float: right;
+      display: inline-block;
+  }
+.skills .ski .value .skill {
+    border-radius: 10px;
+    text-align: right;
+    color: white;
+  }
+  
+  .skills .ski .value .java {width: 80%; background-color: rgba(0, 0, 0, 0.616);}
+  .skills .ski .value  .ad {width: 70%; background-color:  rgba(0, 0, 0, 0.616);}
+  .skills .ski .value  .cpp {width: 60%; background-color:  rgba(0, 0, 0, 0.616);}
+  .skills .ski .value  .js {width: 70%; background-color:  rgba(0, 0, 0, 0.616);}
+  .skills .ski .value  .dsa {width: 65%; background-color:  rgba(0, 0, 0, 0.616);}
