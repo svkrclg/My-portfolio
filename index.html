@@ -2,11 +2,13 @@
 <html>
 <head>
   <title>Saurav Kumar</title>
+  <link rel="icon" href="https://img.icons8.com/windows/32/000000/tree.png" type="image/icon type">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
 <body>
-<header>
+  <div class="header">
     <div class="container">
       <div class="row">
       <div class = "brand-name">
@@ -15,39 +17,41 @@
       <div class="navbar">
         <ul>
           <li><a href="#" class="active">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#works">My Works</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact-me">Contact</a></li>
+
         </ul>
       </div>
       </div>
     </div>
-</header>
+  </div>
 
-<section class="home">
+<div class="home page-section" id="home">
   <div class="container">
     <div class="row full-screen">
       <div class="home-content">
         <div class="block">
            <h6>Hello, My name is </h6>
            <h1>Saurav Kumar</h1>
-           <h3>Software Developer</h3>
+           <h3>Android | Java Developer </h3>
            <div class= "cv-btn">
-             <a href="">Download CV</a>
+             <a href="/my_resume">Download CV</a>
            </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</div>
 <!-- About me section -->
-<div class="about-me">
+<div class="about-me page-section" id="about-me">
   <h2>about me</h2>
   <div class = "col-details">
       <p>Hello, I am Saurav Kumar, 2020 passed out batch from Army Institute of Technology, Pune. Studying computer engineering
         was my only choice ever since I was introduced to Java langauge in 8th standarad (ICSE board), and further opting computer Science as optional subject
         for my intermediate education where I got introduced to C++ and MySQL. This made me highly passionate about computer technologies and my four year of graduation 
-        was full of learn new things and developing whatever came into my mind. In first year I learned basic web development such as HTML, CSS , javascript and in backend such as PHP,
+        was full of learning of new things and developing whatever came into my mind. In first year,I learned basic web development such as HTML, CSS , javascript and in backend it were things such as PHP,
         followed by Android Development and deploying apps in Play store in second year. The next two year was mix of android development and Java standalone application (Linux CLI based),
         and learning basic data structures and algorithms.</p>
   </div>
@@ -61,7 +65,7 @@
 </div>
 
 <!--work section-->
-<div class="works">
+<div class="works page-section" id="works">
     
   <div class="main">
 
@@ -207,7 +211,7 @@
     </div>
 </div>
 
-<div class="skills">
+<div class="skills page-section" id="skills">
   <h2>Skills</h2>
     <div class="ski">
       <div class="title">Java</div>
@@ -246,8 +250,51 @@
 </div>
 
 <!--Send a message-->
-
-<script src="script.js"></script>
+<div class="contact-me page-section" id="contact-me">
+  <h2>Drop a message for me</h2>
+  <div class="address">
+      <p>Purab Tola,</p>
+      <p>Kahalgaon, Bhagalpur,</p>
+      <p>Bihar, 813203</p>
+      <p>Email: svkrclg@gmail.com</p>
+      <p>Call me : 8698588414</p>
+  </div>
+    <div class="form-container">
+      <form onsubmit=" return message_me();">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your name..">
+    
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" placeholder="Your Email-id..">
+    
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write something.." style="height:150px"></textarea>
+    
+        <input type="submit" value="Submit" >
+      </form>
+    </div>
+</div>
+<div class="hobby">
+   <div class="container">
+     <ul>
+       <li>
+        <img src="https://img.icons8.com/ios-filled/50/000000/laptop-coding.png"/>
+       </li>
+       <li>&hearts;</li>
+       <li> <img src="https://img.icons8.com/material-outlined/48/000000/camera.png"/>
+      </li>
+      <li>&hearts;</li>
+       <li><img src="https://img.icons8.com/material-outlined/48/000000/cooking-pot.png"/></li>
+     </ul>
+   </div>
+</div>
+<div class="end">
+   <div class="container">
+     Created by: Saurav Kumar.
+   </div>
+</div>
+<script src="js/script.js">
+</script>
 </body>
 </html>
 

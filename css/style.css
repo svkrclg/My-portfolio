@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900&display=swap');
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 body{
     margin:0;
     font-family: 'Poppins', sans-serif;
@@ -16,7 +17,7 @@ body{
     display: flex;
     flex-wrap: wrap ;
 }
-header{
+.header{
     position: fixed;
     left: 0px;
     right: 0px;  
@@ -25,11 +26,11 @@ header{
 padding: 0px 15px;
 z-index: 10;
 }
-header .row{
+.header .row{
     justify-content: space-between;
     align-items: center;
 }
-header .brand-name a {
+.header .brand-name a {
 text-decoration: none;
 font-size: 22px;
 font-weight: 600;
@@ -38,16 +39,17 @@ text-transform: uppercase;
 position: relative;
 }
 
-header .navbar ul{
+.header .navbar ul{
         list-style: none;
         padding: 0;
         margin: 0;
+        text-transform: uppercase;
 }
-header .navbar ul li{
+.header .navbar ul li{
     display: inline-block;
     margin-left: 35px;
 }
-header .navbar ul li a{
+.header .navbar ul li a{
     font-size: 15px;
     text-decoration: none;
     line-height: 72px;
@@ -56,7 +58,7 @@ header .navbar ul li a{
     display: block;
     position: relative;
 }
-header .navbar ul li a::before{
+.header .navbar ul li a::before{
     content: '';
     height: 3px;
     background-color: #ffffff;
@@ -66,11 +68,11 @@ header .navbar ul li a::before{
     bottom: -1px;
     transition: all .5s ease;
 }
-header .navbar ul li a:hover::before{
+.header .navbar ul li a:hover::before{
     width: 100%;
     left: 0;
 }
-header .navbar ul li a.active::before{
+.header .navbar ul li a.active::before{
     width: 100%;
     left: 0;
 }
@@ -397,9 +399,135 @@ header .navbar ul li a.active::before{
     text-align: right;
     color: white;
   }
-  
+ 
   .skills .ski .value .java {width: 80%; background-color: rgba(0, 0, 0, 0.616);}
   .skills .ski .value  .ad {width: 70%; background-color:  rgba(0, 0, 0, 0.616);}
   .skills .ski .value  .cpp {width: 60%; background-color:  rgba(0, 0, 0, 0.616);}
   .skills .ski .value  .js {width: 70%; background-color:  rgba(0, 0, 0, 0.616);}
   .skills .ski .value  .dsa {width: 65%; background-color:  rgba(0, 0, 0, 0.616);}
+ 
+  @media screen and (max-width: 900px) {
+           .skills .ski  .title{
+               text-align: center;
+               display: flex;
+           }
+           .skills .ski .value{
+               text-align: center;
+               display: flex;
+           }
+  }
+
+  /*Contact me */
+  .contact-me{
+      background-color: #f1f1f1;
+      display: flow-root;
+      flex-wrap: wrap;
+  }
+  .contact-me  h2{
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    position: relative;
+  }
+.contact-me h2:after{
+    position: absolute;
+    content:' ';
+    width: 80px;
+    display:block;
+    border:1px solid black;
+    left: 50%;
+    margin-left: -40px;
+}
+.contact-me .address{
+    float: left;
+    position: relative;
+    text-align: center;
+    width: 50%;
+    margin-top:100px;
+    background-color: #f1f1f1;
+}
+.contact-me .form-container{
+    float: left;
+    width: 50%; 
+}
+
+.contact-me .form form{
+    margin-left: 10%;
+    text-align: left;
+}
+
+.contact-me .form-container input[type=text], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  .contact-me .form-container input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .contact-me .form-container input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .contact-me .form-container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+
+@media screen and (max-width: 900px) {
+    .contact-me .address, .contact-me .form-container{
+      width: 100%;
+    }
+    .contact-me .address{
+        margin-top: 0%;
+    }
+    .contact-me .form .form-container{
+        margin-top: 20px;
+        margin-left: 0%;
+        text-align: center;
+    }
+  }
+  /*Hobby*/
+
+  .hobby{
+      text-align: center;
+      width: 100%;
+  }
+  .hobby .container {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+
+  }
+  .hobby .container ul{
+    list-style-type: none;
+    padding: 0;
+  }
+  .hobby .container ul li{
+      display:inline-block;
+      vertical-align: middle;
+    
+  }
+  /*End*/
+  .end{
+    font-family: 'Fira Code', monospace;
+      padding: 10px;
+      background-color: #000;
+      color: white;
+      text-align: center;
+  }
